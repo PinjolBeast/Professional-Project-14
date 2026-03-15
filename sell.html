@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Sell your luxury property with Luxury Estates. Upload high-quality images, PDFs, and 3D tours effortlessly with our advanced file manager.">
+    <meta name="keywords" content="sell property, luxury real estate, property listing, file upload, 3D tours, real estate platform">
+    <title>Sell Your Property - Luxury Estates</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="relative">
+    <header class="bg-white bg-opacity-95 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo text-2xl font-bold text-gray-800">Luxury Estates</div>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-home mr-1"></i>Home</a></li>
+                    <li><a href="sell.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-plus mr-1"></i>Sell</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-info-circle mr-1"></i>About</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-envelope mr-1"></i>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+<section class="sell-section fade-in">
+        <!-- Hero Image Banner -->
+        <div class="hero-sell fade-in">
+            <div class="hero-overlay">
+                <div class="container">
+                    <h1 class="hero-title">Sell Your Luxury Property</h1>
+                    <p class="hero-subtitle">Premium listing service with advanced file management and 3D tours</p>
+                </div>
+            </div>
+            <img src="img/property1.jpg" alt="Luxury Property Hero" class="hero-img">
+        </div>
+
+        <div class="container">
+            <!-- Property Preview Example -->
+            <div class="preview-section fade-in">
+                <h2>How Your Listing Will Look</h2>
+                <div class="preview-grid">
+                    <div class="preview-card">
+                        <img src="img/property2.jpg" alt="Sample Property Preview" class="preview-img">
+                        <div class="preview-overlay">
+                            <div class="preview-info">
+                                <h3>Sample Villa</h3>
+                                <p>$2,500,000</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="form-title fade-in">List Your Property</h2>
+            <p class="form-desc fade-in">Complete the form below to get started.</p>
+
+            <form id="property-form" class="property-form fade-in">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="title">Property Title</label>
+                        <input type="text" id="title" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="price">Price</label>
+                        <input type="number" id="price" step="0.01" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" placeholder="Describe your luxury property..." required></textarea>
+                </div>
+
+                <div class="file-manager">
+                    <h3>Upload High-Quality Files</h3>
+                    <p class="file-hint">Supports images, PDFs, 3D tours (.gltf), videos</p>
+                    <div id="drop-zone" class="drop-zone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>Drag & drop files here or click to select</p>
+                        <input type="file" id="file-input" multiple accept="image/*,.pdf,.mp4,.gltf">
+                    </div>
+                    <div id="file-list"></div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" id="submit-btn">Submit Property Listing</button>
+                </div>
+            </form>
+
+            <div id="success-animation" class="success-section hidden fade-in">
+                <!-- Lottie success animation -->
+            </div>
+        </div>
+    </section>
+
+    <footer class="absolute bottom-0 w-full bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2023 Luxury Estates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.9.6/lottie.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

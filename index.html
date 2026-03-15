@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover premium real estate properties with Luxury Estates. Find your dream home with our intuitive platform featuring luxury villas, modern apartments, and penthouses.">
+    <meta name="keywords" content="luxury real estate, premium properties, dream homes, villas, apartments, penthouses, property search">
+    <title>Luxury Estates - Premium Real Estate Platform</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="bg-white bg-opacity-95 backdrop-blur-md fixed top-0 w-full z-50 shadow-sm">
+        <nav class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="logo text-2xl font-bold text-gray-800">Luxury Estates</div>
+                <ul class="flex space-x-8">
+                    <li><a href="index.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-home mr-1"></i>Home</a></li>
+                    <li><a href="sell.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-plus mr-1"></i>Sell</a></li>
+                    <li><a href="about.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-info-circle mr-1"></i>About</a></li>
+                    <li><a href="contact.html" class="text-gray-700 hover:text-yellow-600 transition duration-300"><i class="fas fa-envelope mr-1"></i>Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero relative h-screen flex items-center justify-center overflow-hidden pt-20" id="hero">
+        <div class="hero-content text-center z-10 max-w-4xl mx-auto px-4">
+            <h1 class="text-5xl md:text-7xl font-bold text-gray-800 mb-6">Discover Your Dream Home</h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-8">Premium properties with unparalleled luxury and comfort.</p>
+            <a href="#search" class="inline-block bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-full transition duration-300 shadow-lg">
+                <i class="fas fa-search mr-2"></i>Explore Properties
+            </a>
+        </div>
+        <div class="parallax-bg absolute inset-0 bg-gradient-to-br from-gray-100 to-gray-200"></div>
+    </section>
+
+    <section class="bg-white py-8 shadow-lg sticky top-16 z-40" id="search">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-4">
+                <div class="relative flex-1 max-w-md">
+                    <i class="fas fa-map-marker-alt absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400"></i>
+                    <input type="text" placeholder="Search locations..." id="search-input" class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                </div>
+                <select id="price-range" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                    <option value="">Price Range</option>
+                    <option value="0-500k">$0 - $500k</option>
+                    <option value="500k-1m">$500k - $1m</option>
+                    <option value="1m+">$1m+</option>
+                </select>
+                <select id="property-type" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-500 focus:border-transparent">
+                    <option value="">Property Type</option>
+                    <option value="house">House</option>
+                    <option value="apartment">Apartment</option>
+                    <option value="condo">Condo</option>
+                </select>
+                <button id="search-btn" class="bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-8 rounded-lg transition duration-300 shadow-md">
+                    <i class="fas fa-search mr-2"></i>Search
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gray-50" id="properties">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Featured Properties</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+                    <img src="img/property1.jpg" alt="Luxury Villa" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Luxury Villa</h3>
+                        <p class="text-yellow-600 font-bold text-xl mb-2">$2.5M</p>
+                        <p class="text-gray-600"><i class="fas fa-bed mr-2"></i>5 Beds <i class="fas fa-bath ml-4 mr-2"></i>4 Baths</p>
+                    </div>
+                </div>
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+                    <img src="img/property2.jpg" alt="Modern Apartment" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Modern Apartment</h3>
+                        <p class="text-yellow-600 font-bold text-xl mb-2">$800K</p>
+                        <p class="text-gray-600"><i class="fas fa-bed mr-2"></i>3 Beds <i class="fas fa-bath ml-4 mr-2"></i>2 Baths</p>
+                    </div>
+                </div>
+                <div class="property-card bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition duration-300 fade-in">
+                    <img src="img/property3.jpg" alt="Penthouse" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Penthouse</h3>
+                        <p class="text-yellow-600 font-bold text-xl mb-2">$3M</p>
+                        <p class="text-gray-600"><i class="fas fa-bed mr-2"></i>4 Beds <i class="fas fa-bath ml-4 mr-2"></i>3 Baths</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="absolute bottom-0 w-full bg-gray-800 text-white py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2023 Luxury Estates. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
